@@ -77,9 +77,9 @@ BASE_DEV=/home/david/Projects/android/my-android-toolchain-r8/sysroot
 endif
 
 ifdef AARMV7
-MYPREFIX=/home/david/Projects/android/my-android-toolchain-r10c-18/bin/arm-linux-androideabi-
+MYPREFIX=/home/urika/Android/my-android-toolchain-r10c-18/bin/arm-linux-androideabi-
 #MYPREFIX=/home/david/Projects/android/my-android-toolchain-r9-18/bin/
-BASE_DEV=/home/david/Projects/android/my-android-toolchain-r10c-18/sysroot
+BASE_DEV=/home/urika/Android/my-android-toolchain-r10c-18/sysroot
 endif
 
 ifdef AARMV8
