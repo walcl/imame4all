@@ -499,7 +499,8 @@ void running_machine::schedule_exit()
 	m_scheduler.eat_all_cycles();
 
 	// if we're autosaving on exit, schedule a save as well
-	if (options_get_bool(&m_options, OPTION_AUTOSAVE) && (m_game.flags & GAME_SUPPORTS_SAVE))
+	//if (options_get_bool(&m_options, OPTION_AUTOSAVE) && (m_game.flags & GAME_SUPPORTS_SAVE))
+	if (myosd_autosave && (m_game.flags & GAME_SUPPORTS_SAVE))
 		schedule_save("auto");
 }
 
@@ -828,6 +829,7 @@ void running_machine::handle_saveload()
 		return;
 	}
   
+    ULOGD("handle_saveload %s m_saveload_searchpath %s, m_saveload_pending_file %s", opname, m_saveload_searchpath, (char *)m_saveload_pending_file);
 
 	// open the file
 	mame_file *file;
@@ -879,7 +881,7 @@ void running_machine::handle_saveload()
         //END DAV HACKs
     }
 	else
-		popmessage("Error: Failed to open file for %s operation.", opname);
+		ULOGD("Error: Failed to open file for %s operation.", opname);
 
 	// unschedule the operation
 cancel:

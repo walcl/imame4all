@@ -126,4 +126,11 @@
 #include "machine/generic.h"
 #include "video/generic.h"
 
+#ifdef ANDROID
+#include <android/log.h>
+#define ULOGD(fmt...) __android_log_print(ANDROID_LOG_DEBUG, "uuu", fmt)
+#else
+#define ULOGD(fmt...) 
+#endif
+
 #endif	/* __EMU_H__ */
