@@ -77,9 +77,11 @@ BASE_DEV=/home/david/Projects/android/my-android-toolchain-r8/sysroot
 endif
 
 ifdef AARMV7
-MYPREFIX=/home/urika/Android/my-android-toolchain-r10c-18/bin/arm-linux-androideabi-
-#MYPREFIX=/home/david/Projects/android/my-android-toolchain-r9-18/bin/
-BASE_DEV=/home/urika/Android/my-android-toolchain-r10c-18/sysroot
+#MYPREFIX=/home/urika/Android/my-android-toolchain-r10c-18/bin/arm-linux-androideabi-
+#BASE_DEV=/home/urika/Android/my-android-toolchain-r10c-18/sysroot
+
+MYPREFIX=/home/urika/tools/my-android-toolchain-r8e-18/bin/arm-linux-androideabi-
+BASE_DEV=/home/urika/tools/my-android-toolchain-r8e-18/sysroot
 endif
 
 ifdef AARMV8
@@ -460,7 +462,8 @@ NAME = $(TARGET)$(SUBTARGET)
 endif
 
 # fullname is prefix+name+suffix+suffix64+suffixdebug
-FULLNAME = $(PREFIX)$(PREFIXSDL)$(NAME)$(SUFFIX)$(SUFFIX64)$(SUFFIXDEBUG)$(SUFFIXPROFILE)
+#FULLNAME = $(PREFIX)$(PREFIXSDL)$(NAME)$(SUFFIX)$(SUFFIX64)$(SUFFIXDEBUG)$(SUFFIXPROFILE)
+FULLNAME = libMAME4droid.so
 
 # add an EXE suffix to get the final emulator name
 ifdef iOSNOJAILBREAK
