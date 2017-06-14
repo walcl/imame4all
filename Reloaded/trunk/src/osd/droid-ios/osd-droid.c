@@ -59,6 +59,7 @@ int  myosd_num_buttons = 0;
 int  myosd_light_gun = 0;
 int  myosd_fs_counter = 0;
 int  myosd_saveload_combo = 1;
+int  myosd_saveload_support = 0;
 
 int myosd_num_of_joys=1;
 int myosd_video_threaded=1;
@@ -410,6 +411,8 @@ int getMyValue(int key,int i){
 	    	 return 0;
 	    case 8:
 	    	 return myosd_showinfo;
+	    case 16:
+	    	 return myosd_saveload_support;
 	    case 19:
 	    	 return myosd_in_menu;
 	    case 25:

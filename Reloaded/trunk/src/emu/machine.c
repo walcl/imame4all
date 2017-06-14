@@ -370,6 +370,7 @@ void running_machine::start()
 	else if (options_get_bool(&m_options, OPTION_AUTOSAVE) && (m_game.flags & GAME_SUPPORTS_SAVE) != 0)
 		schedule_load("auto");
 
+	myosd_saveload_support = ((m_game.flags & GAME_SUPPORTS_SAVE) != 0);
 	// set up the cheat engine
 	if (options_get_bool(&m_options, OPTION_CHEAT))
 		cheat_init(this);

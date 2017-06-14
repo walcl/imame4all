@@ -68,6 +68,7 @@ extern int  myosd_num_buttons;
 extern int  myosd_light_gun;
 extern int  myosd_fs_counter;
 extern int  myosd_saveload_combo;
+extern int  myosd_saveload_support;
 
 extern unsigned long myosd_pad_status;
     
